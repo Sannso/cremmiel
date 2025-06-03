@@ -36,11 +36,11 @@ import Layout from '../layouts/Layout.astro';
 	  <section id="comprar" class="bg-white py-16 px-6">
 		<div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
 		  <img src="/imgs/cremmiel.jpeg" alt="Frasco de Cremmiel" class="w-72 rounded-xl shadow-lg" />
-		  <div>
+		  <div class="max-md:flex max-md:flex-col max-md:items-center max-md:text-center">
 			<h2 class="text-4xl font-bold mb-4">Un sabor que enamora</h2>
-			<p class="mb-4">Presentación en frasco de 250g. Hecho a mano en pequeños lotes por apicultores locales.</p>
+			<p class="mb-4 max-md:max-w-xs text-balance">Presentación en frasco de 250g. Hecho a mano en pequeños lotes por apicultores locales.</p>
 			<p class="text-2xl font-semibold mb-6">$18.000 COP</p>
-			<button id="comprar" class="px-6 py-3 bg-amber-800 text-white rounded-full text-lg shadow-md hover:bg-amber-700 transition">Comprar ahora</button>
+			<button id="button-comprar" class="px-6 py-3 bg-amber-800 text-white rounded-full text-lg shadow-md hover:bg-amber-700 transition-all cursor-pointer">Comprar ahora</button>
 		  </div>
 		</div>
 	  </section>
@@ -73,7 +73,7 @@ import Layout from '../layouts/Layout.astro';
 
 <script>
 
-const comprar = document.getElementById('comprar');
+const comprar = document.getElementById('button-comprar');
 comprar?.addEventListener('click', () => {
 	window.location.href = 'https://wa.me/573143584271/?text=Hola%20me%20gustaría%20comprar%20un%20frasco%20de%20cremmiel%20gracias';
 });
