@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	 <!-- Hero -->
+	 <section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 py-12 bg-gradient-to-b from-yellow-100 to-yellow-300">
+		<section class="flex flex-col justify-center items-center z-10 p-5 rounded-2xl hover:backdrop-blur-md hover:bg-white/50 transition-all">
+			<h1 class="text-5xl md:text-6xl font-bold mb-4 text-white">Descubre <span class="text-amber-800">Cremmiel</span></h1>
+			<p class="text-xl max-w-xl mb-6 text-white">La deliciosa fusión de miel pura y cacao artesanal. Natural, nutritiva y simplemente irresistible.</p>
+			<a href="#comprar" class="px-6 py-3 bg-amber-800 text-white rounded-full text-lg shadow-md hover:bg-amber-700 transition">Probar ahora</a>
+		</section>
+		<video class="absolute top-0 left-0 w-full h-full object-cover z-0" src="/videos/video.mp4" autoplay loop muted></video>
+	</section>
+  
+	  <!-- Beneficios -->
+	  <section class="py-16 px-6 max-w-5xl mx-auto">
+		<h2 class="text-3xl font-semibold text-center mb-12">¿Por qué elegir Cremmiel?</h2>
+		<div class="grid md:grid-cols-3 gap-8">
+		  <div class="bg-white p-6 rounded-2xl shadow-md">
+			<h3 class="text-xl font-bold mb-2">100% Natural</h3>
+			<p>Sin aditivos ni conservantes. Solo miel pura de abejas y cacao colombiano.</p>
+		  </div>
+		  <div class="bg-white p-6 rounded-2xl shadow-md">
+			<h3 class="text-xl font-bold mb-2">Energía Saludable</h3>
+			<p>Ideal para comenzar tu día con energía natural y antioxidantes.</p>
+		  </div>
+		  <div class="bg-white p-6 rounded-2xl shadow-md">
+			<h3 class="text-xl font-bold mb-2">Versátil y Delicioso</h3>
+			<p>Perfecto para untar, endulzar bebidas o acompañar frutas y postres.</p>
+		  </div>
+		</div>
+	  </section>
+  
+	  <!-- Producto -->
+	  <section id="comprar" class="bg-white py-16 px-6">
+		<div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
+		  <img src="/imgs/cremmiel.jpeg" alt="Frasco de Cremmiel" class="w-72 rounded-xl shadow-lg" />
+		  <div>
+			<h2 class="text-4xl font-bold mb-4">Un sabor que enamora</h2>
+			<p class="mb-4">Presentación en frasco de 250g. Hecho a mano en pequeños lotes por apicultores locales.</p>
+			<p class="text-2xl font-semibold mb-6">$18.000 COP</p>
+			<button id="comprar" class="px-6 py-3 bg-amber-800 text-white rounded-full text-lg shadow-md hover:bg-amber-700 transition">Comprar ahora</button>
+		  </div>
+		</div>
+	  </section>
+  
+	  <!-- Testimonios -->
+	  <section class="bg-yellow-100 py-16 px-6">
+		<h2 class="text-3xl font-semibold text-center mb-12">Lo que dicen nuestros clientes</h2>
+		<div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+		  <div class="bg-white p-6 rounded-xl shadow">
+			<p class="mb-4 italic">“Nunca pensé que la miel con cacao pudiera saber tan bien. ¡Es adictiva!”</p>
+			<p class="font-bold">— Mariana G.</p>
+		  </div>
+		  <div class="bg-white p-6 rounded-xl shadow">
+			<p class="mb-4 italic">“Ideal para mis desayunos. Es natural y me da energía para todo el día.”</p>
+			<p class="font-bold">— Camilo R.</p>
+		  </div>
+		  <div class="bg-white p-6 rounded-xl shadow">
+			<p class="mb-4 italic">“La combinación perfecta entre dulce y saludable. A mis hijos les encanta.”</p>
+			<p class="font-bold">— Laura M.</p>
+		  </div>
+		</div>
+	  </section>
+  
+	  <!-- Footer -->
+	  <footer class="bg-amber-800 text-white text-center py-6 mt-10">
+		<p>&copy; 2025 Cremmiel. Miel chocolatada artesanal con amor desde Colombia.</p>
+	  </footer>
+</Layout>
+
+
+<script>
+
+const comprar = document.getElementById('comprar');
+comprar?.addEventListener('click', () => {
+	window.location.href = 'https://wa.me/573143584271/?text=Hola%20me%20gustaría%20comprar%20un%20frasco%20de%20cremmiel%20gracias';
+});
+
+</script>
